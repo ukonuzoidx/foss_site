@@ -1,0 +1,126 @@
+.features{
+	padding: 80px 0 50px;
+	background: #f1f5f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	.holder{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	} //holder
+
+	.widget{
+		width: 33.333%;
+		padding: 0 15px;
+		margin: 0 0 40px;
+
+		.rtc-itw-inner-holder{
+			display: flex;
+			flex-direction: column-reverse;
+		} //rtc-itw-inner-holder
+
+		.icon-holder{
+			margin: 0 0 20px;
+
+			img{
+				vertical-align: top;
+			} //img
+
+		} //icon-holder
+
+		.text-holder{
+
+			.widget-title{
+				line-height: 1.15em;
+				font-size: 1.1em;
+				font-weight: 500;
+				color: $secondary_color;
+				margin: 0 0 15px;
+			} //widget-title
+
+			.btn-readmore{
+				background: $primary_color;
+				color: $white_color;
+				font-weight: 500;
+				@include border-radius(4px);
+				display: inline-block;
+				padding: 5px 25px;
+				border: 1px solid  $primary_color;
+				@include transition(ease, 0.2s);
+
+				&:hover,
+				&:focus{
+					text-decoration: none;
+					color: $primary_color;
+					background: none;
+				} /*hover*/
+
+			} /*btn-readmore*/
+
+		} //text-holder
+
+	} //widget
+
+	.widget_text{
+		width: 100% !important;
+		margin: 0 0 30px;
+		text-align: center;
+
+		.widget-title{
+			font-size: 1.8em;
+			font-weight: 500;
+			color: $secondary_color;
+			margin: 0 0 15px;
+		} //widget-title
+
+		.textwidget{
+			font-size: 1.1em;
+			line-height: 1.6em;
+			color: #86919d;
+
+			a{
+				border-bottom: 1px dotted $primary_color;
+
+				&:hover,
+				&:focus{
+					text-decoration: none;
+				border-bottom: 0;
+				} //hover
+
+			} //a
+
+		} //textwidget
+
+	} //widget_text
+
+} /*features*/
+
+@media only screen and (max-width: 1024px){
+	.features{
+
+		.widget{
+			width: 50%;
+		} //widget
+
+	} //features
+}
+
+@media only screen and (max-width: 767px){
+
+	.features{
+		padding: 60px 0;
+
+		.section-header{
+
+			.section-title{
+				font-size: 1.333em;
+			} //section-title
+
+		} //section-header
+
+		.widget{
+			width: 100%;
+		} //widget
+
+	} //features
+}

@@ -1,0 +1,109 @@
+
+---Downloaded files---
+The import files for: Digital Download were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/fossa_site
+Data file = C:\xampp2\htdocs\fossa_site/wp-content/uploads/rara-demo-pack/digital-download-demo-content/content/digitaldownload.xml
+Widget file = C:\xampp2\htdocs\fossa_site/wp-content/uploads/rara-demo-pack/digital-download-demo-content/content/digitaldownload.wie
+Customizer file = C:\xampp2\htdocs\fossa_site/wp-content/uploads/rara-demo-pack/digital-download-demo-content/content/digitaldownload.dat
+
+------
+Completed AJAX call number: 1
+
+
+------
+Completed AJAX call number: 2
+
+
+------
+Completed AJAX call number: 3
+
+
+------
+Completed AJAX call number: 4
+
+
+------
+Completed AJAX call number: 5
+
+
+------
+Completed AJAX call number: 6
+
+
+------
+Completed AJAX call number: 7
+
+
+------
+Completed AJAX call number: 8
+
+
+---Importing content---
+[WARNING] Failed to import "Contact": Invalid post type wpcf7_contact_form
+
+Max execution time after content import = 300
+
+---Importing widgets---
+subscribe : Sidebar does not exist in theme (moving widget to Inactive)
+
+BlossomThemes: Email Newsletter Widget - No Title - Imported to Inactive
+
+Sidebar : 
+
+Search - No Title - Widget already exists
+Rara: Featured Widget - No Title - Imported
+Rara: Social Media - Subscribe and Follow - Imported
+RARA: Latest Tweets - Follow Us On - Imported
+Rara: Posts Category Slider - Category Post Slider - Imported
+Recent Posts - No Title - Widget already exists
+Archives - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Meta - No Title - Widget already exists
+
+Features Section : 
+
+Text - Features - Imported
+Rara: Icon Text - Fast Screen Sharing - Imported
+Rara: Icon Text - Secure &amp; Reliable - Imported
+Rara: Icon Text - Global Reach - Imported
+Rara: Icon Text - Community - Imported
+Rara: Icon Text - Unique Design - Imported
+Rara: Icon Text - Solid Framework - Imported
+
+Testimonial Section : 
+
+Text - Testimonials - Imported
+Rara: Testimonial - No Title - Imported
+Rara: Testimonial - No Title - Imported
+Rara: Testimonial - No Title - Imported
+Rara: Testimonial - No Title - Imported
+
+Call To Action Section : 
+
+Rara: Call To Action - Learn How to Create Your Own Mockups! - Imported
+
+Footer One : 
+
+Text - No Title - Imported
+
+Footer Two : 
+
+Categories - Categories - Imported
+
+Footer Three : 
+
+Rara: Recent Post - Recent Posts - Imported
+
+Footer Four : 
+
+BlossomThemes: Email Newsletter Widget - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---rrdi/after_import---
+

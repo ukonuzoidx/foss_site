@@ -1,0 +1,1500 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+    margin: 0 0 1.5em;
+    /* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+    max-width: 100%;
+}
+
+/*=================================
+ Sidebar widget style
+==================================*/
+#secondary,
+.footer-t {
+    .widget {
+        margin: 0 0 40px;
+        border-radius: 4px;
+        border: 1px solid rgba(218, 225, 231, 0.5);
+        box-shadow: 0 2px 0 #dae1e7;
+        padding: 30px;
+
+        .widget-title {
+            color: #21272c;
+            margin: 0 0 1.667em;
+            border-bottom: 1px solid #f1f5f8;
+            font-size: 1em;
+            font-weight: 500;
+            padding: 0 0 0.556em;
+        } //widget-title
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0.889em;
+            line-height: 1.6em;
+
+            li {
+                border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+                margin: 0 0 12px;
+                padding: 0 0 12px;
+
+                &:last-child {
+                    margin: 0;
+                    padding: 0;
+                    border-bottom: 0;
+                } //last-child
+            } //li
+
+            a {
+                color: $font_color;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $primary_color;
+                } //hover
+            } //a
+
+            ul {
+                margin-top: 12px;
+                margin-left: 12px;
+                font-size: 1em;
+            }
+        } //ul
+    } //widget
+
+    .widget_recent_comments,
+    .widget_rss {
+        ul {
+            li {
+                a {
+                    color: rgba(0, 0, 0, 0.5);
+                } //a
+            } //li
+        } //ul
+    } //recent-comments
+
+    .widget_rss {
+        .widget-title {
+            a {
+                color: #21272c;
+            } //a
+        } //widget-title
+    } //widget_rss
+
+    .search-form {
+        border-radius: 4px;
+        border: 1px solid #dae1e7;
+        display: flex;
+        flex-wrap: wrap;
+
+        label {
+            flex-basis: 0;
+            flex-grow: 1;
+        } //label
+
+        input[type="search"] {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            background: none;
+            padding: 0 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        input[type="submit"] {
+            font-size: 0.889em;
+            padding: 8px 12px;
+            border-radius: 0 4px 4px 0;
+
+            &:hover,
+            &:focus {
+                background: #dae1e7;
+                border-color: #dae1e7;
+            } //hover
+        } //input-submit
+    } //search-form
+
+    .widget_tag_cloud {
+        a {
+            display: inline-block;
+            margin: 0 3px 3px 0;
+            font-size: 0.611em !important;
+            font-weight: 500;
+            color: #86919d;
+            @include transition(ease, 0.2s);
+            background: #f1f5f8;
+            @include border-radius(4px);
+            padding: 0 10px;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background: $primary_color;
+                color: #fff;
+            } //hover
+
+            &:focus {
+                outline: thin dotted #000;
+            }
+        } //a
+    } //widget_tag_cloud
+
+    .widget_blossomthemes_email_newsletter_widget {
+        .blossomthemes-email-newsletter-wrapper {
+            padding: 0;
+            text-align: center;
+
+            .text-holder {
+                margin: 0 0 30px;
+
+                h3 {
+                    color: #21272c;
+                    font-size: 1em;
+                    font-weight: 500;
+                    margin: 0 0 0.5em;
+                } //h3
+
+                span {
+                    font-size: 0.8em;
+                    line-height: 1.6em;
+                    display: block;
+                } //span
+            } //text-holder
+
+            form {
+                label {
+                    font-size: 0.8em;
+                    display: block;
+                    line-height: 1.6em;
+                    text-align: left;
+                    margin: 0 0 10px;
+                    padding-left: 24px;
+                    position: relative;
+
+                    .check-mark {
+                        width: 15px;
+                        height: 15px;
+                        background: #dae1e7;
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                    } //check-mark
+
+                    input[type="checkbox"] {
+                        position: absolute;
+                        opacity: 0;
+                        display: block;
+
+                        &:focus ~ .check-mark {
+                            outline: thin dotted #000;
+                        }
+
+                        &:checked ~ .check-mark:after {
+                            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 448 512'%3E%3Cpath d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z'/%3E%3C/svg%3E")
+                                center center no-repeat;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            @include transform(translate(-50%, -50%));
+                            content: "";
+                            width: 10px;
+                            height: 15px;
+                        } //checked
+
+                        &:checked ~ .check-mark {
+                            background: $primary_color;
+                        } //checked-checkmark
+                    } //input-checkbox
+                } //label
+            } //form
+        } //blossomthemes-email-newsletter-wrapper
+    } //widget_blossomthemes_email_newsletter_widget
+
+    .widget_edd_product_details {
+        h3 {
+            color: #21272c;
+            margin: 0 0 0.5em;
+            font-size: 1em;
+            font-weight: 500;
+        } //h3
+
+        form {
+            .edd_purchase_submit_wrapper {
+                margin: 0 0 10px;
+
+                .button {
+                    background: $primary_color;
+                    color: $white_color;
+                    font-weight: 500;
+                    @include border-radius(4px);
+                    display: inline-block;
+                    padding: 15px 25px;
+                    border: 1px solid $primary_color;
+                    @include transition(ease, 0.2s);
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $primary_color;
+                        background: none;
+                    } //hover
+                } //button
+            } //edd_purchase_submit_wrapper
+        } //form
+
+        .edd-meta {
+            font-size: 0.8em;
+            line-height: 1.6em;
+            margin: 0;
+
+            .categories,
+            .tags {
+                display: block;
+                margin: 0 0 10px;
+
+                a {
+                    color: #86919d;
+                    @include transition(ease, 0.2s);
+                    background: #f1f5f8;
+                    @include border-radius(4px);
+                    margin-left: 4px;
+                    display: inline-block;
+                    padding: 0 10px;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        background: $primary_color;
+                        color: #fff;
+                    } /*hover*/
+
+                    &:focus {
+                        outline: thin dotted #000;
+                    }
+                } //a
+            } //categories, tags
+
+            br {
+                display: none;
+            }
+        } //edd-meta
+    } //widget_edd_product_details
+
+    .widget_edd_cart_widget {
+        .edd-cart-number-of-items {
+            font-size: 0.8em;
+            line-height: 1.6em;
+        } //edd-cart-number-of-items
+
+        ul {
+            font-size: 0.8em;
+
+            li {
+                position: relative;
+                background: none;
+
+                .edd-remove-from-cart {
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    cursor: pointer;
+                    width: 15px;
+                    height: 15px;
+                    font-size: 0;
+
+                    &:after {
+                        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a2adb8' viewBox='0 0 448 512'%3E%3Cpath d='M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-54.4 289.1c4.7 4.7 4.7 12.3 0 17L306 377.6c-4.7 4.7-12.3 4.7-17 0L224 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L102.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L280 256l65.6 65.1z'/%3E%3C/svg%3E")
+                            center center no-repeat;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        content: "";
+                    } //after
+                } //edd-remove-from-cart
+
+                .edd-cart-item-separator {
+                    display: none;
+                } //edd-cart-item-separator
+
+                .edd-cart-item-title {
+                    display: block;
+                    width: 90%;
+                } //edd-cart-item-title
+
+                &.edd_checkout {
+                    a {
+                        background: $primary_color;
+                        color: $white_color;
+                        font-weight: 500;
+                        @include border-radius(4px);
+                        display: inline-block;
+                        padding: 10px 25px;
+                        border: 1px solid $primary_color;
+                        @include transition(ease, 0.2s);
+                        display: block;
+                        text-align: center;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: none;
+                            color: $primary_color;
+                            background: none;
+                        } //hover
+                    } //a
+                } //edd_checkout
+            } //li
+        } //ul
+    } //widget_edd_cart_widget
+
+    .widget_edd_reviews_featured_review,
+    .widget_edd_reviews {
+        .edd-review-meta {
+            b {
+                font-size: 0.899em;
+                line-height: 1.6em;
+                display: block;
+            } //b
+
+            .edd-review-meta-rating {
+                .dashicons-star-filled:before {
+                    color: #f1c40f;
+                } //dashicons-star-filled:before
+            } //edd-review-meta-rating
+
+            .edd-review-metadata {
+                font-size: 0.8em;
+                line-height: 1.6em;
+            } //edd-review-metadata
+        } //edd-review-meta
+
+        .edd-review-content {
+            font-size: 0.899em;
+            line-height: 1.6em;
+        } //edd-review-content
+    } //widget_edd_reviews_featured_review
+
+    .widget_media_gallery {
+        .gallery {
+            margin: 0 -3px;
+
+            .gallery-item {
+                padding: 0 3px;
+                margin: 0 0 6px;
+
+                img {
+                    vertical-align: top;
+                    border-radius: 4px;
+                }
+
+                .gallery-caption {
+                    font-size: 0.7em;
+                    line-height: 1.6em;
+                } //gallery-caption
+            } //gallery-item
+        } //gallery
+    } //widget_media_gallery
+
+    .widget_media_image {
+        .wp-caption {
+            margin: 0;
+        } //wp-caption
+    } //widget_media_image
+
+    .widget_raratheme_featured_page_widget {
+        .widget-featured-holder {
+            display: flex;
+            flex-direction: column;
+
+            .section-subtitle {
+                order: 1;
+                color: #21272c;
+                margin: 0 0 1.667em;
+                border-bottom: 1px solid #f1f5f8;
+                font-size: 1em;
+                font-weight: 500;
+                padding: 0 0 0.556em;
+            } //section-subtitle
+
+            .img-holder {
+                order: 2;
+                margin: 0 0 15px;
+
+                img {
+                    vertical-align: top;
+                    border-radius: 4px;
+                } //img
+            } //img-holder
+
+            .text-holder {
+                order: 3;
+                font-size: 0.899em;
+                line-height: 1.6em;
+
+                .btn-readmore {
+                    background: $primary_color;
+                    color: $white_color;
+                    font-weight: 500;
+                    @include border-radius(4px);
+                    display: inline-block;
+                    padding: 10px 25px;
+                    border: 1px solid $primary_color;
+                    @include transition(ease, 0.2s);
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $primary_color;
+                        background: none;
+                    } //hover
+                } //btn-readmore
+            } //text-holder
+
+            .widget-title {
+                padding: 0;
+                border-bottom: 0;
+                margin: 0 0 0.5em;
+            }
+        } //widget-featured-holder
+    } //widget_raratheme_featured_page_widget
+
+    .widget_raratheme_companion_cta_widget {
+        .text-holder {
+            font-size: 0.899em;
+            line-height: 1.6em;
+        } //text-holder
+
+        .button-wrap {
+            .btn-cta {
+                background: $primary_color;
+                color: $white_color;
+                font-weight: 500;
+                @include border-radius(4px);
+                display: inline-block;
+                padding: 8px 20px;
+                margin: 0 5px 5px 0;
+                border: 1px solid $primary_color;
+                @include transition(ease, 0.2s);
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $primary_color;
+                    background: none;
+                }
+            } //cta
+        } //button-wrap
+
+        .text {
+            margin: -30px;
+            padding: 30px;
+            border-radius: 4px;
+        } //text
+
+        .bttk-cta-bg {
+            margin: -30px;
+            padding: 30px;
+            border-radius: 4px;
+            position: relative;
+            color: #fff;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .raratheme-cta-container {
+                position: relative;
+            }
+
+            .widget-title {
+                color: #fff;
+            } //wdiget-title
+        } //bttk-cta-bg
+
+        .centered {
+            text-align: center;
+        } //centered
+
+        .right {
+            text-align: right;
+        } //right
+    } //widget_raratheme_companion_cta_widget
+
+    .widget_raratheme_client_logo_widget {
+        .image-holder {
+            margin: 0 0 10px;
+
+            &.black-white {
+                &:hover,
+                &:focus {
+                    filter: grayscale(0);
+                } //hover
+            } //black-white
+        } //image-holder
+    } //widget_raratheme_client_logo_widget
+
+    .widget_rtc_contact_social_links {
+        .contact-info {
+            font-size: 0.899em;
+            line-height: 1.6em;
+
+            .contact-list {
+                li {
+                    padding-left: 35px;
+                } //li
+            } //contact-list
+
+            .social-networks {
+                margin-top: 30px;
+
+                li {
+                    margin: 0 7px 7px 0;
+                    padding: 0;
+                    border-bottom: 0;
+
+                    a {
+                        border: 1px solid #f1f5f8;
+                        border-radius: 4px;
+                        color: #86919d;
+                        @include transition(ease, 0.2s);
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: none;
+                            color: #fff;
+                            background: $primary_color;
+                            border-color: $primary_color;
+                        } //hover
+
+                        &:focus {
+                            outline: thin dotted #000;
+                        }
+                    } //a
+                } //li
+            } //social-networks
+        } //contact-info
+    } //widget_rtc_contact_social_links
+
+    .widget_raratheme_companion_faqs_widget {
+        .accordion {
+            li {
+                a {
+                    position: relative;
+
+                    &:after {
+                        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%238d8d8d' viewBox='0 0 384 512'%3E%3Cpath d='M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E")
+                            center center no-repeat;
+                        top: 3px;
+                    } //after
+                } //a
+
+                &.show {
+                    a {
+                        color: $primary_color;
+
+                        &:after {
+                            @include transform(rotate(#{45}deg));
+                        } //after
+                    } //a
+                } //show
+            } //li
+
+            .inner {
+                margin-top: 20px;
+            } //inner
+        } //accordion
+    } //widget_raratheme_companion_faqs_widget
+
+    .widget_raratheme_featured_widget {
+        .img-holder {
+            margin: 0 0 20px;
+
+            img {
+                vertical-align: top;
+                border-radius: 4px;
+            } //img
+        } //img-holder
+
+        .text-holder {
+            font-size: 0.899em;
+            line-height: 1.6em;
+
+            .readmore {
+                background: $primary_color;
+                color: $white_color;
+                font-weight: 500;
+                @include border-radius(4px);
+                display: inline-block;
+                padding: 7px 20px;
+                border: 1px solid $primary_color;
+                @include transition(ease, 0.2s);
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $primary_color;
+                    background: none;
+                }
+            } //readmore
+        } //text-holder
+    } //widget_raratheme_featured_widget
+
+    .widget_rrtc_icon_text_widget {
+        .rtc-itw-inner-holder {
+            display: flex;
+            flex-direction: column-reverse;
+        } //rtc-itw-inner-holder
+
+        .icon-holder {
+            margin: 0 0 20px;
+            font-size: 45px;
+            color: $primary_color;
+        } //icon-holder
+
+        .text-holder {
+            .btn-readmore {
+                background: $primary_color;
+                color: $white_color;
+                font-weight: 500;
+                @include border-radius(4px);
+                display: inline-block;
+                padding: 7px 20px;
+                border: 1px solid $primary_color;
+                @include transition(ease, 0.2s);
+                font-size: 0.899em;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $primary_color;
+                    background: none;
+                }
+            } //btn-readmore
+        } //text-holder
+    } //widget_rrtc_icon_text_widget
+
+    .widget_raratheme_image_widget {
+        .raratheme-iw-inner-holder {
+            display: flex;
+            flex-direction: column;
+        } //raratheme-iw-inner-holder
+
+        .widget-title {
+            order: 1;
+        } //widget-title
+
+        .image-holder {
+            order: 2;
+
+            img {
+                vertical-align: top;
+                border-radius: 4px;
+            } //img
+        } //image-holder
+
+        p {
+            order: 3;
+            font-size: 0.899em;
+            line-height: 1.6em;
+        } //p
+
+        .readmore {
+            order: 4;
+            background: $primary_color;
+            color: $white_color;
+            font-weight: 500;
+            @include border-radius(4px);
+            display: inline-block;
+            padding: 7px 20px;
+            border: 1px solid $primary_color;
+            @include transition(ease, 0.2s);
+            font-size: 0.899em;
+            text-align: center;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $primary_color;
+                background: none;
+            }
+        } //readmore
+    } //widget_raratheme_image_widget
+
+    .widget_raratheme_popular_post,
+    .widget_raratheme_recent_post {
+        ul {
+            li {
+                .post-thumbnail {
+                    img {
+                        border-radius: 4px;
+                    } //img
+                } //post-thumbnail
+            } //li
+        } //ul
+    } //widet popular and recent post
+
+    .widget_media_image {
+        img {
+            vertical-align: top;
+            border-radius: 4px;
+        } //img
+    } //widget_media_image
+
+    .widget_rara_posts_category_slider_widget {
+        .owl-carousel {
+            .owl-item {
+                img {
+                    vertical-align: top;
+                    height: 412px;
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            } //owl-item
+        } //owl-carousel
+
+        .item {
+            position: relative;
+        }
+
+        .post-thumbnail {
+            margin: 0;
+        } //post-thumbnail
+
+        .carousel-title {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            padding: 105px 16px 24px;
+            text-align: left;
+            display: flex;
+            flex-direction: column-reverse;
+            border-radius: 0 0 8px 8px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.5+100 */
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
+
+            .cat-links {
+                font-size: 0.556em;
+                line-height: 1em;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                a {
+                    color: #fff;
+                    display: inline-block;
+                    margin: 0 5px 5px 0;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $primary_color;
+                    } //hover
+                } //a
+            } //cat-links
+
+            .title {
+                font-size: 1.111em;
+                line-height: 1.25em;
+                font-weight: 700;
+                margin: 0 0 8px;
+
+                a {
+                    color: #fff;
+                    @include transition(ease, 0.2s);
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $primary_color;
+                    } //hover
+                } //a
+            } //title
+        } //careousel-title
+
+        .owl-theme {
+            .owl-nav {
+                margin: 0;
+
+                [class*="owl-"] {
+                    position: absolute;
+                    top: 50%;
+                    width: 30px;
+                    height: 30px;
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 4px;
+                    @include transform(translate(0, -50%));
+
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        @include transform(translate(-50%, -50%));
+                    } //span
+
+                    &:hover,
+                    &:focus {
+                        background: $primary_color;
+                    } //hover
+                }
+
+                .owl-prev {
+                    left: 20px;
+                } //owl-prev
+
+                .owl-next {
+                    right: 20px;
+                } //owl-next
+            } //nav
+
+            .owl-dots {
+                margin-top: 12px;
+
+                .owl-dot {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        margin: 0 6px;
+                        background: #b1b1b2;
+                    } //span
+                } //owl-dot
+            } //owl-dots
+        } //owl-theme
+    } //widget_rara_posts_category_slider_widget
+
+    .widget_rtc_social_links {
+        .social-networks {
+            margin-top: 30px;
+
+            li {
+                margin: 0 7px 7px 0;
+                padding: 0;
+                border-bottom: 0;
+
+                a {
+                    border: 1px solid #f1f5f8;
+                    border-radius: 4px;
+                    color: #86919d;
+                    @include transition(ease, 0.2s);
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: #fff;
+                        background: $primary_color;
+                        border-color: $primary_color;
+                    } //hover
+
+                    &:focus {
+                        outline: thin dotted #000;
+                    }
+                } //a
+            } //li
+        } //social-networks
+    } //widget_rtc_social_links
+
+    .pricing-table-standard {
+        position: relative;
+        padding-top: 60px;
+
+        .tag {
+            position: absolute;
+            top: 20px;
+            left: -5px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.6em;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            span {
+                background: #2aa461;
+                display: block;
+                padding: 0 20px;
+                @include border-radius(4px 0 0 0);
+                position: relative;
+            } /*span*/
+
+            &:after {
+                width: 0;
+                height: 0;
+                border-top: 14px solid transparent;
+                border-right: 10px solid #fff;
+                border-bottom: 14px solid transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: "";
+            } /*after*/
+
+            &:before {
+                width: 5px;
+                height: 9px;
+                background: #015426;
+                @include border-radius(4px 0 0 4px);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                content: "";
+            }
+        } /*tag*/
+
+        .title {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: $secondary_color;
+            margin: 0 0 10px;
+        } /*title*/
+
+        .type {
+            display: block;
+            font-size: 0.8em;
+            line-height: 1.625em;
+            color: #86919d;
+            margin: 0 0 20px;
+        } /*type*/
+
+        .price {
+            margin: 50px 0 30px;
+            color: $primary_color;
+            font-size: 3em;
+            font-weight: 500;
+
+            .currency {
+                display: inline-block;
+                font-size: 0.6em;
+                font-weight: 300;
+                @include transform(translate(0, -22px));
+            } /*currency*/
+        } //price
+
+        .plan-lists {
+            margin: 0 0 30px;
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            font-size: 0.8em;
+
+            li {
+                margin: 0 0 10px;
+                padding: 0 0 10px 25px;
+                border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+                position: relative;
+
+                &:last-child {
+                    border-bottom: 0;
+                    padding: 0 0 10px 25px;
+                    margin: 0 0 10px;
+                } /*last-child*/
+
+                &:before {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    content: "";
+                    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a2adb8' viewBox='0 0 192 512'%3E%3Cpath d='M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z'/%3E%3C/svg%3E")
+                        center center no-repeat;
+                    width: 7px;
+                    height: 29px;
+                } /*before*/
+            } /*li*/
+        } /*plan-lists*/
+
+        .button {
+            display: block;
+            padding: 9px 25px;
+            background: $primary_color;
+            color: $white_color;
+            font-weight: 500;
+            @include border-radius(4px);
+            border: 1px solid $primary_color;
+            @include transition(ease, 0.2s);
+            text-align: center;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $primary_color;
+                background: none;
+            } //hover
+        } /*btn-primary*/
+    } //pricing-table-standard
+
+    .widget_rrtc_description_widget {
+        .image-holder {
+            margin: 0 0 20px;
+
+            img {
+                vertical-align: top;
+                border-radius: 4px;
+            } //img
+        } //image-holder
+
+        .text-holder {
+            .name {
+                font-size: 0.899em;
+                line-height: 1.6em;
+                display: block;
+                font-weight: 700;
+                color: #000;
+            } //name
+
+            .designation {
+                font-size: 0.7em;
+                line-height: 1.6em;
+                display: block;
+            } //designation
+
+            .description {
+                margin-top: 10px;
+                font-size: 0.899em;
+                line-height: 1.6em;
+            } //description
+        } //text-holder
+
+        .social-profile {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                margin: 0 7px 7px 0;
+                padding: 0;
+                border-bottom: 0;
+
+                a {
+                    border: 1px solid #f1f5f8;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 4px;
+                    color: #86919d;
+                    @include transition(ease, 0.2s);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: #fff;
+                        background: $primary_color;
+                        border-color: $primary_color;
+                    } //hover
+
+                    &:focus {
+                        outline: thin dotted #000;
+                    }
+                } //a
+            } //li
+        } //social-networks
+
+        .rtc-team-holder-modal {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+
+            .rtc-team-inner-holder-modal {
+                max-width: 570px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 4px;
+                background: #fff;
+                padding: 30px;
+                @include transform(translate(-50%, -50%));
+            } //rtc-team-inner-holder-modal
+
+            .close_popup {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 30px;
+                height: 30px;
+                font-size: 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 448 512'%3E%3Cpath d='M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-54.4 289.1c4.7 4.7 4.7 12.3 0 17L306 377.6c-4.7 4.7-12.3 4.7-17 0L224 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L102.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L280 256l65.6 65.1z'/%3E%3C/svg%3E")
+                        center center no-repeat;
+                } //after
+            } //close_popup
+        } //rtc-team-holder-modal
+    } //widget_rrtc_description_widget
+
+    .widget_rrtc_testimonial_widget {
+        .img-holder {
+            margin: 0 0 20px;
+
+            img {
+                vertical-align: top;
+                border-radius: 4px;
+            } //img
+        } //image-holder
+
+        .text-holder {
+            .name {
+                font-size: 0.899em;
+                line-height: 1.6em;
+                display: block;
+                font-weight: 700;
+                color: #000;
+            } //name
+
+            .designation {
+                font-size: 0.7em;
+                line-height: 1.6em;
+                display: block;
+            } //designation
+
+            .testimonial-content {
+                margin-top: 10px;
+                font-size: 0.899em;
+                line-height: 1.6em;
+            } //testimonial-content
+        } //text-holder
+    } //widget_rrtc_testimonial_widget
+} //secondary
+
+//widget issue fixes
+
+#secondary {
+    .widget_raratheme_companion_cta_widget {
+        .raratheme-cta-container {
+            .widget-title {
+                border: 0;
+                margin-bottom: 0px;
+            } //cta header
+        }
+    } //end of cta
+
+    .widget_raratheme_image_text_widget {
+        .raratheme-itw-holder {
+            .btn-readmore {
+                padding: 10px 8px;
+                font-size: 0.88em;
+            } //end of btn readmore
+        } //text-holder
+    } //image text widget
+}
+
+.site-footer {
+    .footer-t {
+        .widget_raratheme_image_text_widget {
+            .raratheme-itw-holder {
+                .btn-readmore {
+                    padding: 10px 8px;
+                    font-size: 0.88em;
+                } //end of btn-readmore
+            } //end of holder
+        } //end of text-widget
+
+        .widget_raratheme_recent_post,
+        .widget_raratheme_popular_post {
+            ul.style-one,
+            ul.style-two,
+            ul.style-three {
+                li {
+                    border-bottom: 0px;
+                }
+            } //end of ul
+
+            .style-three {
+                .entry-header {
+                    .cat-links,
+                    .entry-title,
+                    .entry-meta {
+                        a {
+                            color: #000;
+                        }
+                    } //end of category links
+                }
+            } //style-three
+        } //end of recent post
+    }
+
+    // start of custom categories
+    .widget_raratheme_custom_categories {
+        .raratheme-custom-categories-wrap {
+            .raratheme-custom-categories-meta-wrap {
+                li {
+                    position: relative;
+                    padding: 0px;
+                    border: 0;
+                }
+            } //end of ul
+        } //end of holder
+    } //end of custom categories
+
+    //start of author bio
+
+    .widget_raratheme_author_bio {
+        .raratheme-author-bio-holder {
+            .text-holder {
+                .title-holder,
+                .text-signature {
+                    color: #fff;
+                }
+                .author-bio-socicons {
+                    .social-share-list {
+                        border-bottom: 0px;
+                        margin: 0px 5px;
+                    }
+                } //end of socio icons
+            } //end of text holder
+        } //end of author holder
+    } //end of author bio
+
+    //start of poppular post
+
+    .widget_raratheme_popular_post {
+        ul.style-three {
+            li {
+                .entry-header {
+                    .view-count {
+                        color: black;
+                    }
+                } //end of entry-header
+            } //end of li
+        } //end of ul
+    } //end of popular post
+
+    .widget.widget_rrtc_description_widget {
+        .rtc-team-holder-modal {
+            z-index: 999999999999999999999999999999999999999;
+            .rtc-team-inner-holder-modal {
+                .text-holder {
+                    color: #121212;
+
+                    .name {
+                        color: #000;
+                    } //end of name
+                } //end of text holder
+                .social-profile {
+                    a {
+                        color: #86919d;
+                    }
+                } //end of ul
+            } //end of modal
+        } //end of popup holder
+    } //end of team member
+}
+
+.site-footer,
+#secondary {
+    .widget_rara_posts_category_slider_widget {
+        .owl-carousel {
+            .owl-nav {
+                .owl-prev:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 192 512'%3E%3Cpath d='M25.1 247.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L64.7 256l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L25 264.5c-4.6-4.7-4.6-12.3.1-17z'/%3E%3C/svg%3E")
+                        center center no-repeat;
+                    width: 0.833rem;
+                    height: 1.111rem;
+                } //end of owl-prev
+
+                .owl-next:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 192 512'%3E%3Cpath d='M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z'/%3E%3C/svg%3E")
+                        center center no-repeat;
+                    width: 0.833rem;
+                    height: 1.111rem;
+                } //end pf owl-next
+
+                [class*="owl-"] {
+                    position: absolute;
+                    top: 39%;
+                    width: 1.667rem;
+                    height: 1.667rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 4px;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    font-size: 0;
+                } //all the class after owl
+            } //end of .owl-nav
+        } //end of owl carousal
+    } //end of post-category slider
+
+    .widget.widget_raratheme_client_logo_widget {
+        .raratheme-client-logo-inner-holder {
+            .image-holder {
+                width: 27%;
+                margin: 6px;
+                display: inline-block;
+            } //end of image holder
+        } //end of inner holder
+    } //end of client logo widget
+
+    //start of cta widget fixes
+    .widget_raratheme_companion_cta_widget {
+        .text {
+            margin: 0px;
+        }
+    } //end of cta widget
+
+    .widget_raratheme_recent_post,
+    .widget_raratheme_popular_post {
+        ul {
+            li {
+                .entry-header {
+                    .cat-links {
+                        display: block;
+                    }
+                    .entry-title {
+                        a {
+                            font-size: 0.85em;
+                        }
+                    } //end of entry title
+                } //end of entry header
+            } //end of ul
+        } //end of ul
+    } //end of popular and recent widget
+
+    .widget.widget_raratheme_image_text_widget {
+        .raratheme-itw-holder {
+            li {
+                border: 0;
+            }
+            .btn-readmore {
+                background: #2f8be6;
+                width: fit-content;
+                color: #ffffff;
+                font-weight: 500;
+                border-radius: 4px;
+                display: inline-block;
+                padding: 7px 20px;
+                border: 1px solid #2f8be6;
+                -webkit-transition: ease, 0.2s;
+                -moz-transition: ease, 0.2s;
+                transition: ease, 0.2s;
+                font-size: 0.899em;
+
+                &:hover {
+                    background-color: #2c5680;
+                }
+            }
+        } //end of ul
+    } //end of image text
+
+    .widget.widget_rrtc_testimonial_widget {
+        .rtc-testimonial-holder {
+            .img-holder {
+                img {
+                    width: 100%;
+                } //end of image
+            } //end of image holder
+        } //end of wrapper
+    } //end of testimonial
+
+    .widget.widget_raratheme_companion_faqs_widget {
+        .raratheme-faq-holder {
+            .accordion {
+                .expand-faq {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                    display: block;
+                } //end of faq
+            } //end of ul
+        } //end of faq holder
+    } //end of faq widget
+    .widget.widget_raratheme_custom_categories {
+        .raratheme-custom-categories-wrap {
+            .category-fallback-svg {
+                a {
+                    background-color: #007cba;
+
+                    .post-count {
+                        background-color: #2c5680;
+                        color: #fff;
+                    } //end of post count
+                } //end of a
+            } //end of li
+        } //end of wrapper
+    } //end of custom categories
+
+    .widget.widget_raratheme_companion_cta_widget {
+        .raratheme-cta-container {
+            .widget-title,
+            .text-holder p {
+                color: #fff;
+            }
+        } //end of wrapper
+    } //end of cta
+
+    .widget.widget_raratheme_author_bio {
+        .raratheme-author-bio-holder {
+            .author-socicons {
+                .social-share-list {
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        display: inline-block;
+                        background-color: #2f8be6;
+                        color: #fff;
+                        line-height: 40px;
+                        border-radius: 50%;
+
+                        &:hover {
+                            background-color: #2c5680;
+                        }
+                    }
+                } //end of li
+            } //end of socio icons
+            .readmore {
+                background-color: #2f8be6;
+                color: #fff;
+
+                &:hover {
+                    background-color: #2c5680;
+                    text-decoration: none;
+                }
+            } //end of button
+        } //end of holder
+    } //end of author bio
+} //end of site-footer and secondary

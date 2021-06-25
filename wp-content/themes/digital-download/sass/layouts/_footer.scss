@@ -1,0 +1,433 @@
+.site-footer{
+	background: $footer_bg_color;
+
+	a:focus{
+		outline: thin dotted #fff !important;
+	}
+
+	.footer-t{
+		padding: 70px 0;
+		border-bottom: 1px solid #2c3237;
+
+		.column-1,
+		.column-2,
+		.column-3,
+		.column-4{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+
+			.col{
+				padding: 0 15px;
+
+			} //col
+
+		} //column
+
+		.column-1{
+
+			.col{
+				width: 100%;
+			} //col
+
+		} //column-1
+
+		.column-2{
+
+			.col{
+				width: 50%;
+			} //col
+
+		} //column-2
+
+		.column-3{
+
+			.col{
+				width: 33.333%;
+			} //col
+
+		} //column-3
+
+		.column-4{
+
+			.col{
+				width: 25%;
+			} //col
+
+		} //column-4
+
+		.widget{
+			color: #DAE1E7;
+			border-radius: 0;
+			border: 0;
+			box-shadow: none;
+			padding: 0;
+
+			.widget-title{
+				color: #fff;
+				margin: 0 0 1.000em;
+				font-size: 1em;
+				font-weight: 500;
+				border-bottom: 0;
+				padding: 0;
+			} //widget-title
+
+			ul{
+	            margin: 0;
+	            padding: 0;
+	            list-style: none;
+	            font-size: 0.889em;
+	            line-height: 1.600em;
+
+	            li{
+	                border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+	                margin: 0 0 10px;
+	                padding: 0 0 10px;
+
+	                &:last-child{
+	                    margin: 0;
+	                    padding: 0;
+	                    border-bottom: 0;
+	                } //last-child
+
+	            } //li
+
+	            a{
+	                color: #DAE1E7;
+
+	                &:hover,
+	                &:focus{
+	                    text-decoration: none;
+	                    color: $primary_color;
+	                } //hover
+
+	            } //a
+
+	            ul{
+	                margin-top: 12px;
+	                margin-left: 12px;
+	                font-size: 1em;
+	            }
+
+	        } //ul
+
+	        &.widget_blossomthemes_email_newsletter_widget{
+
+	        	.blossomthemes-email-newsletter-wrapper{
+	        		background: none !important;
+
+	        		.text-holder{
+
+	        			h3{
+	        				color: #fff;
+	        			} //h3
+
+	        		} //text-holder
+
+	        	} //blossomthemes-email-newsletter-wrapper
+
+	        } //widget_blossomthemes_email_newsletter_widget
+
+	        &.widget_edd_product_details{
+
+	        	h3{
+	        		color: #fff;
+	        	} //h3
+
+	        } //widget_edd_product_details
+
+	        &.widget_raratheme_featured_page_widget{
+
+	        	.widget-featured-holder{
+
+	        		.section-subtitle{
+	        			color: #fff;
+	        			border-bottom: 0;
+	        			padding: 0;
+	        		} //section-subtitle
+
+	        	} //widget-featured-holder
+
+	        } //widget_raratheme_featured_page_widget
+
+	        &.widget_raratheme_companion_cta_widget{
+
+	        	.bttk-cta-bg{
+	        		margin: 0;
+	        	} //bttk-cta-bg
+
+	        } //widget_raratheme_companion_cta_widget
+
+	        &.widget_rtc_contact_social_links{
+
+	        	.contact-info{
+					
+					.contact-list{
+
+						li{
+							color: #DAE1E7;
+
+							padding-left: 35px;
+
+							svg{
+								color: #DAE1E7;
+							} //svg
+
+						} //li
+
+					} //contact-list
+
+					.social-networks{
+
+						li{
+							vertical-align: top;
+						} //li
+
+					} //social-networks
+
+	        	} //contact-info
+
+	        } //widget_rtc_contact_social_links
+
+	        &.widget_raratheme_companion_faqs_widget{
+
+	        	.col{
+	        		width: 100%;
+	        		padding: 0;
+	        	} //col
+
+	        } //widget_raratheme_companion_faqs_widget
+
+	        &.widget_rtc_social_links{
+
+	        	.social-networks{
+
+	        		li{
+	        			vertical-align: top;
+	        			padding: 0;
+	        			border-bottom: 0;
+
+	        			a{
+
+	        				&:hover,
+	        				&:focus{
+	        					color: #fff;
+	        				} //hover
+
+	        			} //a
+
+	        		} //li
+
+	        	} //social-networks
+
+	        } //widget_rtc_social_links
+
+	        &.pricing-table-standard{
+				padding-top: 60px;
+
+	        	.col{
+	        		width: 100%;
+	        		padding: 0;
+	        	} //col
+
+	        	.title{
+	        		color: #fff;
+	        	} //title
+
+	        	.tag{
+
+	        		&:after{
+	        			border-right: 10px solid #2c3237;
+	        		} //after
+
+	        	} //tag
+
+	        	.plan-lists{
+	        		margin: 0 0 20px;
+
+	        		li{
+	        			padding-left: 25px;
+	        		} //li
+
+	        	} //plan-list
+
+	        } //pricing-table-standard
+
+	        &.widget_raratheme_companion_stat_counter_widget{
+
+	        	.col{
+	        		width: 100%;
+	        		padding: 0;
+	        	} //col
+
+	        } //widget_raratheme_companion_stat_counter_widget
+
+	        &.widget_rrtc_description_widget{
+
+	        	.text-holder{
+
+	        		.name{
+	        			color: #fff;
+	        		} //name
+
+	        	} //text-holder
+
+	        	.social-profile{
+	        		margin-top: 20px;
+
+	        		li{
+	        			margin-right: 10px;
+	        			padding-bottom: 0;
+	        			border-bottom: 0;
+
+	        			a{
+
+	        				&:hover,
+	        				&:focus{
+	        					color: #fff;
+	        				} //hover
+
+	        			} //a
+
+	        		} //li
+
+	        	} //social-profile
+
+	        } //widget_rrtc_description_widget
+
+	        &.widget_rrtc_testimonial_widget{
+
+	        	.text-holder{
+
+	        		.name{
+	        			color: #fff;
+	        		} //name
+
+	        	} //text-holder
+
+	        } //widget_rrtc_testimonial_widget
+
+		} //widget
+
+	} /*footer-t*/
+
+	.footer-b{
+		padding: 20px 0;
+
+		.site-info{
+			line-height: 1.714em;
+			font-size: 0.7em;
+			color: #dae1e7;
+			float: left;
+
+			a{
+				color: #dae1e7;
+				@include transition(ease, 0.2s);
+
+				&:hover,
+				&:focus{
+					text-decoration: none;
+					color: $primary_color;
+				} /*hover*/
+
+			} /*a*/
+
+			.privacy-policy-link{
+				margin-left: 4px;
+			} //privacy-policy-link
+
+		} /*site-info*/
+
+		.social-networks{
+			float: right;
+			font-size: 0.8em;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li{
+				float: left;
+				margin-left: 20px;
+
+				a{
+					color: #dae1e7;
+					@include transition(ease, 0.2s);
+
+					&:hover,
+					&:focus{
+						text-decoration: none;
+						color: $primary_color;
+					} /*hover*/
+
+				} /*a*/
+
+			} /*li*/
+
+		} /*social-networks*/
+
+	} /*footer-b*/
+
+} /*site-footer*/
+
+@media only screen and (max-width: 1024px){
+	.site-footer{
+
+		.footer-t{
+
+			.column-4,
+			.column-3{
+
+				.col{
+					width: 50%;
+				} //col
+
+			} //column-4
+
+		} //footer-t
+
+		.footer-b{
+
+			.site-info{
+				width: 100%;
+				text-align: center;
+				margin: 0 0 10px;
+			} //site-info
+
+			.social-networks{
+				width: 100%;
+				text-align: center;
+
+				li{
+					float: none;
+					display: inline-block;
+					margin: 0 10px;
+				} //li
+
+			} //social-networks
+
+		} //footer-b
+
+	} //site-footer
+
+} //media 1024
+
+@media only screen and (max-width: 767px){
+	.site-footer{
+
+		.footer-t{
+
+			.column-4,
+			.column-3,
+			.column-2{
+
+				.col{
+					width: 100%;
+				} //col
+
+			} //column-4
+
+		} //footer-t
+
+	} //site-footer
+
+} //media 767

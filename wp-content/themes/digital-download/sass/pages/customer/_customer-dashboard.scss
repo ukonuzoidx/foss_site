@@ -1,0 +1,108 @@
+.page-template-dashboard{
+
+    .page{
+
+        .page-content{
+            max-width: 780px;
+            background: #fff;
+            margin: 0 auto 60px;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgba(218, 225, 231, 0.5);
+            box-shadow: 0 2px 0 #DAE1E7;
+            padding: 50px;
+
+            .account-title{
+                color: #21272C;
+                font-weight: 500;
+                font-size: 1.333em !important;
+                line-height: 1.083em;
+                border-bottom: 2px solid #F1F5F8;
+                margin: 0 0 30px !important;
+                padding: 0 0 15px;
+                float: left;
+                width: 100%;
+            } //account-title
+
+            .edd_form{
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+
+                fieldset{
+                    padding: 0;
+                    background: none;
+                    margin: 0 0 50px;
+
+                    &:last-child{margin: 0;}
+
+                    legend{
+                        font-size: 18px !important;
+                        border-bottom: 0;
+                        padding: 10px 20px;
+                        background: #F1F5F8;
+                        border-radius: 4px 4px 0 0;
+                    } //legend
+
+                    label{
+                        display: block !important;
+                    } //label
+
+                    p{
+                        margin: 0 0 20px !important;
+                    }
+
+                } //fieldset
+
+            } //edd_form
+
+            table{
+                font-size: 0.8em;
+                border-top: 0 !important;
+                border-bottom: 0 !important;
+
+                thead{
+
+                    th{
+                        text-align: left !important;
+                        background: #f1f5f8 !important;
+                        padding: 20px !important;
+                        border-bottom: 0 !important;
+
+                        &:first-child{
+                            border-radius: 4px 0 0 4px;
+                        } //first-child
+
+                        &:last-child{
+                            border-radius: 0 4px 4px 0;
+                        } //last-child
+
+                    } //th
+
+                } //thead
+
+                tbody{
+
+                    tr{
+                        border-bottom: 1px solid #f1f5f8;
+
+                        &:last-child{
+                            border-bottom: 0;
+                        } //last-child
+
+                        td{
+                            border-bottom: 0 !important;
+                            padding: 10px 20px !important;
+                        }
+
+                    } //tr
+
+                } //tbody
+
+            } //table
+
+        } //page-content
+
+    } //page
+
+} //page-template-dashboard

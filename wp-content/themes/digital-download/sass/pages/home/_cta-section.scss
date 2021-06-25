@@ -1,0 +1,167 @@
+.cta-section{
+	// background: #f1f5f8;
+	// padding: 80px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	.widget{
+		margin: 0;
+
+		.centered{text-align: center;} /*centered*/
+
+		.text,
+		.bttk-cta-bg{
+			// background: none !important;
+			padding: 80px 0;
+		}
+
+		.widget-title{
+			font-size: 1.8em;
+			font-weight: 500;
+			color: $secondary_color;
+			margin: 0 0 15px;
+		} /*widget-title*/
+
+		.text-holder{
+
+			p{
+				font-size: 1.1em;
+				line-height: 1.6em;
+				color: #86919d;
+			} /*p*/
+
+			.button-wrap{
+
+				.btn-cta{
+					background: $primary_color;
+					color: $white_color;
+					font-weight: 500;
+					@include border-radius(4px);
+					display: inline-block;
+					padding: 15px 25px;
+					border: 1px solid  $primary_color;
+					@include transition(ease, 0.2s);
+					margin: 0 5px 10px;
+
+					&:hover,
+					&:focus{
+						text-decoration: none;
+						color: $primary_color;
+						background: none;
+					} /*hover*/
+
+				} /*btn-cta*/
+
+			} /*btn-wrap*/
+
+		} /*text-holder*/
+
+		.right{
+			position: relative;
+
+			.widget-title,
+			.text-holder{
+				width: 60%;
+			} /*widget-title*/
+
+			.text-holder{
+
+				.button-wrap{
+					position: absolute;
+					top: 50%;
+					right: 0;
+					@include transform(translate(0, -50%));
+					width: 40%;
+					text-align: right;
+				} /*button-wrap*/
+
+			} /*text-holder*/
+
+		} /*right*/
+
+		.bttk-cta-bg{
+			position: relative;
+
+			&:after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.75);
+				content: '';
+			} //after
+
+		} //bttk-cta-bg
+
+		.raratheme-cta-container{
+			max-width: 1170px;
+			padding: 0 15px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 1;
+		}
+
+	} /*widget*/
+
+} /*cta-section*/
+
+@media only screen and (max-width: 767px){
+
+	.cta-section{
+		padding: 60px 0;
+
+		.widget{
+
+			.widget-title{
+				font-size: 1.333em;
+			} //widget-title
+
+			.text-holder{
+
+				.button-wrap{
+
+					.btn-cta{
+						font-size: 0.889em;
+						padding: 12px 20px;
+					} //btn-cta
+
+				} //button-wrap
+
+			} //text-holder
+
+		} //widget
+
+	} //cta-section
+
+	.cta-section{
+
+		.widget{
+
+			.right{
+
+				.widget-title,
+				.text-holder{
+					width: 100%;
+					text-align: center;
+				}
+
+				.text-holder{
+
+					.button-wrap{
+						position: unset;
+						@include transform(translate(0, 0));
+						width: 100%;
+
+						.btn-cta{
+							display: block;
+							text-align: center;
+						}
+					}
+				}
+
+			} //right
+
+		} //widget
+
+	} //cta-section
+}

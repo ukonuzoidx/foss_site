@@ -1,0 +1,323 @@
+.edd-checkout{
+
+    .page{
+
+        .entry-content{
+
+            #edd_checkout_cart{
+                margin: 0 0 50px;
+
+                thead{
+
+                    th{
+                        color: #21272C;
+                        border: 1px solid #f1f5f8;
+                        border-radius: 0 !important;
+                    } //th
+
+                } //thead
+
+                tbody{
+
+                    tr{
+
+                        td{
+                            padding: 20px 30px;
+                            border: 0;
+
+                            &:first-child{
+                                border-left: 1px solid #eee;
+                            } //first-child
+
+                            &:last-child{
+                                border-right: 1px solid #eee;
+                            } //last-child
+
+                            .edd_cart_item_image{
+                                display: inline-block;
+                                vertical-align: middle;
+                            } //edd_cart_item_image
+
+                            img{
+                                width: 80px;
+                                border-radius: 4px;
+                                margin-right: 20px;
+                            } //img
+
+                            .edd_checkout_cart_item_title{
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+
+                            .edd_cart_remove_item_btn{
+                                // padding-left: 25px;
+                                display: inline-block;
+
+                                &:before{
+                                    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23111' viewBox='0 0 448 512'%3E%3Cpath d='M192 188v216c0 6.627-5.373 12-12 12h-24c-6.627 0-12-5.373-12-12V188c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12zm100-12h-24c-6.627 0-12 5.373-12 12v216c0 6.627 5.373 12 12 12h24c6.627 0 12-5.373 12-12V188c0-6.627-5.373-12-12-12zm132-96c13.255 0 24 10.745 24 24v12c0 6.627-5.373 12-12 12h-20v336c0 26.51-21.49 48-48 48H80c-26.51 0-48-21.49-48-48V128H12c-6.627 0-12-5.373-12-12v-12c0-13.255 10.745-24 24-24h74.411l34.018-56.696A48 48 0 0 1 173.589 0h100.823a48 48 0 0 1 41.16 23.304L349.589 80H424zm-269.611 0h139.223L276.16 50.913A6 6 0 0 0 271.015 48h-94.028a6 6 0 0 0-5.145 2.913L154.389 80zM368 128H80v330a6 6 0 0 0 6 6h276a6 6 0 0 0 6-6V128z'/%3E%3C/svg%3E") center center no-repeat;
+                                    width: 14px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    content: '';
+                                    vertical-align: top;
+                                    margin-right: 10px;
+                                } //before
+
+                            } //edd_cart_remove_item_btn
+
+                        } //td
+
+                    } //tr
+
+                } //tbody
+
+                tfoot{
+                    background: #F1F5F8;
+
+                    tr{
+
+                        th{
+                            color: #21272C;
+                        } //th
+
+                    } //tr
+                    
+                } //tfoot
+
+            } //edd_checkout_cart
+
+            #edd_checkout_form_wrap{
+
+                .edd-payment-icons{
+                    margin: 0 0 50px;
+                } //edd-payment-icons
+
+            } //edd_checkout_form_wrap
+
+            #edd_payment_mode_select_wrap{
+                margin: 0 0 50px;
+
+                fieldset{
+                    padding: 0;
+                    border: 0;
+
+                    legend{
+                        float: left;
+                        width: 100%;
+                        color: #21272C;
+                        font-size: 1.333em;
+                        line-height: 1.083em;
+                        font-weight: 500;
+                        padding-bottom: 15px;
+                        margin: 0 0 15px;
+                        border-bottom: 2px solid #F1F5F8;
+                    } //legend
+
+                    #edd-payment-mode-wrap{
+                        
+                        .edd-gateway-option{
+                            display: block;
+                            margin: 0 0 20px;
+                            font-weight: 400;
+                        } //edd-gateway-option
+
+                    } //edd-payment-mode-wrap
+
+                } //fieldset
+
+            } //edd_payment_mode_select_wrap
+
+            #edd_checkout_form_wrap{
+
+                fieldset{
+                    padding: 30px;
+                    border: 1px solid rgba(218, 225, 231, 0.5);
+
+                    legend{
+                        float: left;
+                        width: 100%;
+                        color: #21272C;
+                        font-size: 1.333em;
+                        line-height: 1.083em;
+                        font-weight: 500;
+                        padding-bottom: 15px;
+                        margin: 0 0 15px;
+                        border-bottom: 2px solid #F1F5F8;
+                    } //legend
+
+                    input[type="email"],
+                    input[type="text"]{
+                        width: 100%;
+                        padding: 10px 15px;
+                    }
+
+                    #edd_final_total_wrap{
+                        background: #F1F5F8;
+                        border: 0;
+                    } //edd_final_total_wrap
+
+                    input[type="submit"]{
+                        background: $primary_color;
+                        color: $white_color;
+                        font-weight: 500;
+                        @include border-radius(4px);
+                        display: inline-block;
+                        padding: 15px 25px;
+                        border: 1px solid  $primary_color;
+                        @include transition(ease, 0.2s);
+
+                        &:hover,
+                        &:focus{
+                            text-decoration: none;
+                            color: $primary_color;
+                            background: none;
+                        }
+                    }
+
+                } //fieldset
+
+            } //edd_purchase_form_wrap
+
+            #edd-rp-checkout-wrapper{
+                margin: 0 0 50px;
+
+                #edd-rp-items-wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px;
+
+                    .edd-rp-item{
+                        width: 33.333%;
+                        padding: 0 15px;
+                        margin: 0 0 30px;
+                        float: none;
+                        min-height: inherit;
+
+                        > a{
+                            display: flex;
+                            flex-direction: column-reverse;
+
+                            &:hover,
+                            &:focus{
+                                text-decoration: none;
+                            } //hover
+
+                        } //a 
+
+                        .edd-rp-item-title{
+                            font-size: 0.8em;
+                            line-height: 1.4375em;
+                            font-weight: 700;
+                            margin: 0;
+                            color: #21272c;
+                        } //edd-rp-item-title
+
+                        .edd_cart_item_image{
+                            margin: 0 0 15px;
+
+                            img{
+                                width: 100%;
+                                vertical-align: top;
+                            } //img
+
+                        } //edd_cart_item_image
+
+                        .edd_price{
+                            font-size: 0.8em;
+                            line-height: 1.4375em;
+                            font-weight: 700;
+                            color: #21272c;
+                        } //edd_price
+
+                        .edd-add-to-cart{
+                            background: $primary_color;
+                            color: $white_color;
+                            font-weight: 500;
+                            @include border-radius(4px);
+                            display: inline-block;
+                            padding: 15px 25px;
+                            border: 1px solid  $primary_color;
+                            margin-top: 20px;
+                            @include transition(ease, 0.2s);
+
+                            &:hover,
+                            &:focus{
+                                text-decoration: none;
+                                color: $primary_color;
+                                background: none;
+                            }
+
+                        } //edd-add-to-cart
+
+                        .edd_price_options{
+
+                            ul{
+                                font-size: 0.889em;
+                                text-align: left;
+                                margin-top: 15px;
+
+                                li{
+                                    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+                                    padding: 0 0 8px;
+                                    margin: 0 0 8px;
+
+                                    label{
+                                        position: relative;
+                                        padding-left: 28px;
+                                        display: block;
+
+                                        .check-mark{
+                                            position: absolute;
+                                            top: 2px;
+                                            left: 0;
+                                            width: 18px;
+                                            height: 18px;
+                                            background: #DAE1E7;
+                                            border-radius: 50%;
+
+                                        } //checkmark
+
+                                        input[type="radio"]{
+                                            position: absolute;
+                                            opacity: 0;
+                                        } //input-radio
+
+                                        input[type="radio"]:checked ~ .check-mark{
+                                            background: #2F8BE6;
+
+                                            &:after{
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                width: 14px;
+                                                height: 14px;
+                                                content: '';
+                                                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 512 512'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'/%3E%3C/svg%3E") center center no-repeat;
+                                                @include transform(translate(-50%, -50%));  
+                                            } //after
+
+                                        } //input radio checkmark
+
+                                    } //label
+
+                                } //li
+
+                            } //ul
+
+                            span{
+                                display: inline-block;
+                            }
+                            
+                        } //edd_price_options
+
+                    } //edd-rp-item 
+
+                } //edd-rp-items-wrapper
+
+            } //edd-rp-checkout-wrapper
+
+        } //entry-content
+
+    } //page
+
+} //edd-checkout

@@ -1,0 +1,171 @@
+/*==========================
+ Common style
+===========================*/
+.fallback-svg {
+    border-radius: 4px;
+    vertical-align: top;
+}
+.site{
+	background: #fff;
+}
+
+.custom-background .site{
+	margin: 0 20px;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.row{
+	margin: 0 -15px;
+}
+
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#rara-top{
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+	border: 1px solid rgba(162, 173, 184, 0.5);
+	text-align: center;
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	display: none;
+	z-index: 2;
+
+	span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	} //span
+
+}
+
+.edit-link{
+	display: block;
+	clear: both;
+}
+
+.sticky-header{
+	position: sticky;
+	top: 0;
+	z-index: 2;
+
+	&.sticky-bg{
+
+		.header-holder{
+			background: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			@include transition(ease, 0.35s);
+
+			.site-header{
+				margin: 0;
+				border-bottom-color: rgba(255, 255, 255, 0.2);
+
+				.site-title{
+
+					a{
+						color: #21272c;
+					} //a
+
+				} //site-title
+
+				.site-description{
+					color: $font_color;
+				}
+
+				.right{
+
+					.tools{
+
+						.cart,
+						.form-section{
+							color: #21272c;
+						} //cart
+
+					} //tools
+
+				} //right
+
+			} //site-header
+
+		} //header-holder
+
+		.main-navigation{
+
+			> div{
+
+				> ul{
+
+					> li{
+
+						> a{
+							color: $font_color;
+
+							&:hover,
+							&:focus{
+								color: #21272c;
+							} //hover
+
+						} //a
+
+						&.current-menu-item > a,
+						&.current-menu-ancestor > a,
+						&.current_page_ancestor > a,
+						&.current_page_item > a{
+							color: #21272c;
+						} //current-menu-item
+
+					} //li
+
+				} //ul
+
+			} //div
+			
+		} //main-navigation
+
+	} //sticky-bg
+
+} //sticky-header
+
+@media only screen and (max-width: 1024px){
+	.container{
+		max-width: 720px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.custom-background .site{
+		margin: 0 10px;
+	}
+
+	.container{
+		max-width: 420px;
+	}
+
+	#rara-top{
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+		right: 20px;
+		bottom: 20px;
+	} //rara-top
+}

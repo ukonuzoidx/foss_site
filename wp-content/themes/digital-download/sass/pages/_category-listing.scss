@@ -1,0 +1,17 @@
+.post-count{
+	line-height: 1.9em;
+	font-size: 1.1em;
+	color: #86919d;
+	margin: 0 0 20px;
+
+	em{
+		font-weight: 700;
+		color: $secondary_color;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.post-count{
+		font-size: 1em;
+	}
+}

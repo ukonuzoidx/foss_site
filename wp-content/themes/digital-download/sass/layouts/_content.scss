@@ -1,0 +1,27 @@
+.site-content{
+	margin: 60px 0 80px;
+}
+
+#primary{
+	float: left;
+	width: 66.6667%;
+	margin-right: 5.1282%;
+}
+
+#secondary{
+	float: left;
+	width: 28.2051%;
+}
+
+@media only screen and (max-width: 1024px){
+	#primary{
+		width: 100%;
+		margin-bottom: 60px;
+		margin-right: 0;
+		margin-left: 0;
+	} /*primary*/
+
+	#secondary{
+		width: 100%;
+	}
+}

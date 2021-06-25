@@ -1,0 +1,103 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	background: $primary_color;
+	color: $white_color;
+	padding: 9px 24px;
+	font-size: 1em;
+	font-weight: 500;
+	border: 1px solid $primary_color;
+	@include border-radius(4px);
+	@include transition(ease, 0.2s);
+	outline: none;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: $white_color;
+	border-color: $primary_color;
+	color: $primary_color;
+	text-decoration: none;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	background: $white_color;
+	border-color: $primary_color;
+	color: $primary_color;
+	text-decoration: none;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus{
+	outline: thin dotted;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #86919d;
+	border: 1px solid #dae1e7;
+	border-radius: 4px;
+	padding: 10px 15px;
+	font-size: 0.8em;
+	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+select:focus {
+	color: #111;
+	outline: thin dotted;
+}
+
+select {
+	border: 1px solid #dae1e7;
+}
+
+textarea {
+	width: 100%;
+	height: 180px;
+	resize: vertical;
+}

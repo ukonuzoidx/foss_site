@@ -1,0 +1,125 @@
+.page-template-dashboard{
+    background: #F1F5F8;
+
+    .site{background: #F1F5F8;}
+
+    .page{
+
+        .entry-header{
+            text-align: center;
+            margin: 0 0 60px;
+            width: 100%;
+        } //entry-header
+
+        .edd_form{
+            max-width: 780px;
+            margin: 0 auto 30px;
+            width: 100%;
+            padding: 0 15px;
+
+            fieldset{
+                border: 0;
+                padding: 50px;
+                background: #fff;
+                margin: 0;
+            } //fieldset
+
+            legend{
+                color: #21272C;
+                font-weight: 500;
+                font-size: 1.333em !important;
+                line-height: 1.083em;
+                border-bottom: 2px solid #F1F5F8;
+                margin: 0 0 30px !important;
+                padding: 0 0 15px;
+                float: left;
+                width: 100%;
+            } //legend
+
+            label{
+                color: #21272C;
+                font-weight: 500;
+                font-size: 0.889em;
+                line-height: 1.313em;
+                display: block;
+                margin: 0 0 10px;
+            } //label
+
+            .edd-login-remember{
+
+                label{
+                    font-weight: 400;
+                } //label
+
+            } //edd-login-remembe
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="url"],
+            textarea{
+                width: 100%;
+                border: 1px solid #DAE1E7;
+                border-radius: 4px;
+                background: #fff;
+                box-shadow: none;
+                padding: 10px 15px;
+            } //input-text
+
+            input[type="submit"]{
+                background: $primary_color;
+                color: $white_color;
+                font-weight: 500;
+                @include border-radius(4px);
+                display: inline-block;
+                padding: 10px 20px;
+                border: 1px solid  $primary_color;
+                @include transition(ease, 0.2s);
+                font-size: 1em;
+                line-height: 1.600em;
+                text-shadow: none;
+                height: inherit;
+                box-shadow: none;
+                margin: 0 0 15px;
+
+                &:hover,
+                &:focus{
+                    text-decoration: none;
+                    color: $primary_color;
+                    background: none;
+                }
+
+            } //input-submit
+
+            .edd-login-submit{
+                margin: 0 0 5px;
+
+                input[type="submit"]{
+                    margin: 0;
+                } //submit
+
+            } //edd-login-submit
+
+            .edd-lost-password{
+
+                a{
+                    font-size: 0.778em;
+                    line-height: 1.600em;
+                    border-bottom: 1px dotted $primary_color;
+                    @include transition(ease, 0.2s);
+
+                    &:hover,
+                    &:focus{
+                        text-decoration: none;
+                        border-bottom: 0;
+                    } //hover
+
+                } //a
+
+            } //edd-lost-password
+
+        } //edd_form
+
+    } //page
+
+} //page-template-dashboard
